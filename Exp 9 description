@@ -1,0 +1,31 @@
+Sure, here's a summary of the provided Python script:
+
+**Summary:**
+
+The Python script simulates the Bit Error Rate (BER) performance of Binary Phase Shift Keying (BPSK) modulation in an Additive White Gaussian Noise (AWGN) channel over a range of Signal-to-Noise Ratio (SNR) values.
+
+**Key Components:**
+
+1. **Parameters Setting:**
+   - `n_bits`: Specifies the number of bits to be transmitted.
+   - `SNRdBs`: Defines a range of SNR values in dB.
+   - `SNRs`: Calculates the SNR values in linear scale from the SNR range in dB.
+
+2. **Generating Random Bits:**
+   - Random bits with values of either `0` or `1` are generated using `numpy`'s `randint` function.
+
+3. **Looping Over SNR Values:**
+   - For each SNR value, BPSK modulation is performed by mapping `0` to `-1` and `1` to `1`.
+   - AWGN noise is added to the modulated symbols based on the calculated noise power.
+   - BPSK demodulation is performed by comparing the received symbols with `0`.
+   - The Bit Error Rate (BER) is calculated by comparing the transmitted bits with the decoded bits, and it's stored for each SNR value.
+
+4. **Plotting the Results:**
+   - The BER values obtained for different SNR values are plotted on a semilog scale.
+   - The x-axis represents SNR values in dB, and the y-axis represents the Bit Error Rate.
+   - Axes labels, title, and grid are added to the plot for clarity.
+   - The plot visually illustrates how the BER varies with changing SNR levels, providing insights into the performance of the BPSK modulation scheme in an AWGN channel.
+
+**Conclusion:**
+
+The script enables the analysis of the impact of noise on the performance of BPSK modulation. By plotting the BER against SNR, it provides valuable information about the communication system's reliability under different noise conditions, aiding in the design and optimization of communication systems.
