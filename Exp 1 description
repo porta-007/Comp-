@@ -1,0 +1,25 @@
+Certainly! Here's a summary of the provided Python script:
+
+**Summary:**
+
+The Python script simulates a simple communication system employing Code Division Multiple Access (CDMA) technique. It allows users to input data bits and then encodes them using predefined code sequences. After encoding, the script sums up the encoded signals to create a resultant channel signal representing the transmission over the communication medium.
+
+Users can select a specific channel to listen to, and based on the chosen channel, the script calculates the inner product between the resultant channel signal and the corresponding code sequence. Finally, it determines and prints the transmitted data bit based on the calculated inner product.
+
+**Key Components:**
+
+1. **Input Data Bits:** Users are prompted to input data bits (D1, D2, D3, D4) to be transmitted.
+   
+2. **Encoding:** The input data bits are encoded using predefined code sequences (c1, c2, c3, c4) through element-wise multiplication.
+
+3. **Resultant Channel:** Encoded signals are summed up to create a resultant channel signal representing the transmission.
+
+4. **Channel Selection:** Users can choose a specific channel (C1, C2, C3, C4) to listen to.
+
+5. **Inner Product Calculation:** The inner product between the resultant channel signal and the selected code sequence is calculated.
+
+6. **Data Bit Determination:** The sum of the inner product is divided by the length of the inner product to determine the transmitted data bit.
+
+7. **Output:** The calculated data bit that was transmitted is printed to the console.
+
+Overall, the script provides a basic simulation of CDMA communication, demonstrating the encoding and decoding process using predefined code sequences and allowing users to observe the transmission of data bits over the communication medium.
