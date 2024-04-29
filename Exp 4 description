@@ -1,0 +1,36 @@
+This Python script simulates the Bit Error Rate (BER) performance of Binary Phase Shift Keying (BPSK) modulation over a Rayleigh fading channel and compares it with theoretical values.
+
+**Explanation:**
+
+1. **Imports:**
+   - `numpy` is imported as `np` for numerical computations.
+   - `erfc` from `scipy.special` is imported to calculate the complementary error function.
+   - `matplotlib.pyplot` is imported as `plt` for plotting.
+
+2. **Parameters:**
+   - `N`: Number of bits or symbols.
+   - `Eb_N0_dB`: Array of multiple Eb/N0 (Signal-to-Noise Ratio) values in dB.
+
+3. **Transmitter:**
+   - Generates random bits `ip` with equal probability.
+   - BPSK modulates the bits (`0` -> `-1`, `1` -> `1`) to generate the signal `s`.
+
+4. **Simulation:**
+   - Generates complex Gaussian noise `n` and Rayleigh fading channel `h`.
+   - Adds noise and fading to the transmitted signal to obtain the received signal `y`.
+   - Performs hard decision decoding (`ipHat`) by comparing the real part of received signal with fading to estimate the transmitted bits.
+   - Calculates the number of bit errors (`nErr`) by comparing the transmitted bits with the estimated bits.
+
+5. **BER Calculation:**
+   - Computes the simulated BER (`simBer`) by dividing the number of bit errors by the total number of bits.
+   - Calculates theoretical BER for AWGN channel (`theoryBerAWGN`) and Rayleigh fading channel (`theoryBer`).
+
+6. **Plotting:**
+   - Plots the theoretical BER for AWGN and Rayleigh channels, and the simulated BER against Eb/N0.
+   - Axes limits, grid, labels, and title are set for the plot.
+   - Legends and markers are added for clarity.
+   - Displays the plot.
+
+**Summary:**
+
+The script simulates the BER performance of BPSK modulation over a Rayleigh fading channel. It generates random bits, applies modulation, simulates the transmission through noise and fading, and then estimates the transmitted bits at the receiver using hard decision decoding. The BER is calculated and compared with theoretical values for both AWGN and Rayleigh channels. Finally, a plot is generated to visualize the BER performance against different Eb/N0 values.
